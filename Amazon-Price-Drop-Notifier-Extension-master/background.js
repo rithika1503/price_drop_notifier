@@ -1,6 +1,6 @@
 let userEmail;
 let firebaseConfig = {
-    apiKey: "AIzaSyBJh87Tv_yRcYBR1nDZjqOwtem6bYemUsU",
+    apiKey: "Add key",
     authDomain: "extension-71ea7.firebaseapp.com",
     projectId: "extension-71ea7",
     storageBucket: "extension-71ea7.appspot.com",

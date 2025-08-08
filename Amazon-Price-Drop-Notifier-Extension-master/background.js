@@ -5,7 +5,7 @@ let firebaseConfig = {
     projectId: "extension-71ea7",
     storageBucket: "extension-71ea7.appspot.com",
     messagingSenderId: "706371350777",
-    appId: "1:706371350777:web:28ae1e6e9a583fa82eb228",
+    appId: "---------",
     measurementId: "G-GC87XM6E15"
 };
 
@@ -63,6 +63,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         alert('You will be notified when the price drops');
     }
 });
+
 
 
 

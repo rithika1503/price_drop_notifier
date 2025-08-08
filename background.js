@@ -12,7 +12,7 @@ importScripts("https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-com
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBkCaXriG2iujHNn4SrZnY813AaE6YVibI",
+  apiKey: "------",
   authDomain: "price-drop-notifier-bf271.firebaseapp.com",
   projectId: "price-drop-notifier-bf271",
   storageBucket: "price-drop-notifier-bf271.firebasestorage.app",
@@ -119,3 +119,4 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         });
     }
 });
+

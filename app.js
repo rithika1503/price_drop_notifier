@@ -13,14 +13,15 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 
 function sendEmail(userEmail, url, price) {
     let message = {
-        to: userEmail,
-        from: 'sannidhirithika@gmail.com',
-        subject: 'Price has dropped',
-        text: `The price on ${url} has dropped below ${price}`,
-        html: `<strong>The price on ${url} has dropped below ${price}</strong>`,
-    }
+      to: userEmail,
+      from: 'sannidhirithika@gmail.com',
+      subject: 'Price has dropped',
+      text: `The price on ${url} has dropped below ${price}`,
+      html: `The price on ${url} has dropped below ${price}`
+    };
     return sgMail.send(message);
-}
+  }
+  
 
 const checkPrice = async (url, price, userEmail) => {
     try {

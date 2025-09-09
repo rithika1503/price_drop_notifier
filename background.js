@@ -2,7 +2,7 @@
 // Import the functions you need from the SDKs you need
 importScripts("https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js");
 importScripts("https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js");
-importScripts("https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-compat.js");
+
 
 
 
@@ -22,9 +22,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+// Do NOT use analytics here.
 
 //njno
 

@@ -4,8 +4,8 @@
     "version": "2.0",
   
     "background": {
-      "service_worker": "background.js",
-      "type": "module"
+      "service_worker": "background.js"
+      
     },
   
     "action": {
@@ -20,7 +20,8 @@
     "permissions": [
       "tabs",
       "scripting",
-      "activeTab"
+      "activeTab",
+      "notifications"
     ],
   
     "host_permissions": [

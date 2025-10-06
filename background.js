@@ -16,7 +16,7 @@ importScripts('packages/firebase-auth-compat.js');
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
 
-  apiKey: "------",
+  apiKey: "SENDGRID_API_KEY",
   projectId: "price-drop-notifier-bf271",
   storageBucket: "price-drop-notifier-bf271.firebasestorage.app",
   messagingSenderId: "905401518742",

@@ -1,8 +1,8 @@
 // Import Firebase SDK (compat version for background scripts)
 // Import the functions you need from the SDKs you need
 // Example (files must be inside your extension directory)
-importScripts('vendor/firebase-app-compat.js');
-importScripts('vendor/firebase-auth-compat.js');
+importScripts('packages/firebase-app-compat.js');
+importScripts('packages/firebase-auth-compat.js');
 // Never use CDN or external URLs!
 
 

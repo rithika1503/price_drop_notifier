@@ -1,18 +1,25 @@
 {
   "name": "amazon-extension",
   "version": "1.0.0",
-  "description": "chrome extension",
+  "description": "Chrome extension with backend API for Amazon price tracking",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon -e js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "shubham",
+  "author": "Rithika",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.4.6",
+    "@sendgrid/mail": "^7.7.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "nightmare": "^3.0.2"
-  }
+    "nodemon": "^2.0.15",
+    "puppeteer": "^24.23.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": []
 }

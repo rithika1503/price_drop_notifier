@@ -1,43 +1,60 @@
 {
-    "manifest_version": 3,
-    "name": "Amazon Price Tracker and Scraper",
-    "version": "2.0",
+  "manifest_version": 3,
+  "name": "Amazon Price Monitor",
+  "version": "1.0.0",
+  "description": "Track Amazon product prices and get notified when prices drop",
   
-    "background": {
-      "service_worker": "background.js"
-      
-    },
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications",
+    "background",
+    "activeTab"
+  ],
   
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {"128": "icon.png"}
-    },
-    
-    "icons": {
-      "128": "icon.png"
-    },
-
-    "permissions": [
-      "tabs",
-      "scripting",
-      "activeTab",
-      "notifications"
-    ],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://amazon.com/*",
+    "https://*.amazon.com/*"
+  ],
   
-    "host_permissions": [
-      "<all_urls>"
-    ],
+  "background": {
+    "service_worker": "background.js"
+  },
   
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["packages/jquery.min.js", "content.js"]
-      }
-    ],
-  
-    "content_security_policy": {
-      "extension_pages": "script-src 'self'; object-src 'self';"
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*/dp/*",
+        "https://amazon.com/*/dp/*",
+        "https://*.amazon.com/*/dp/*"
+      ],
+      "js": ["content.js"]
     }
-    
-  }
+  ],
   
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Amazon Price Monitor",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "popup.js", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -18,9 +18,9 @@ class BackgroundPriceMonitor {
 
     initializeFirebase() {
         const firebaseConfig = {
-            apiKey: "api_key",
+            apiKey: "FIREBASE_API_KEY",
             authDomain: "cept-58b52.firebaseapp.com",
-            projectId: "cept-58b52",
+            projectId: "FIREBASE_PROJECT_ID",
             storageBucket: "cept-58b52.firebasestorage.app",
             messagingSenderId: "566498940237",
             appId: "1:566498940237:web:08e855da409e84f8181304",
@@ -28,7 +28,7 @@ class BackgroundPriceMonitor {
         };
 
         try {
-            if (firebaseConfig.apiKey !== "api_key") {
+            if (firebaseConfig.apiKey !== "FIREBASE_API_KEY") {
                 firebase.initializeApp(firebaseConfig);
                 this.auth = firebase.auth();
                 this.firestore = firebase.firestore();

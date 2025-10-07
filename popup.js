@@ -17,9 +17,9 @@ class PopupController {
 
     initializeFirebase() {
         const firebaseConfig = {
-            apiKey: "AIzaSyBeM7pTqjmC0NeXpM58Qpou516bHaDEOJU",
+            apiKey: "FIREBASE_API_KEY",
             authDomain: "cept-58b52.firebaseapp.com",
-            projectId: "cept-58b52",
+            projectId: "FIREBASE_PROJECT_ID",
             storageBucket: "cept-58b52.firebasestorage.app",
             messagingSenderId: "566498940237",
             appId: "1:566498940237:web:08e855da409e84f8181304",
@@ -27,7 +27,7 @@ class PopupController {
         };
 
         try {
-            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== "AIzaSyBeM7pTqjmC0NeXpM58Qpou516bHaDEOJU") {
+            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== "FIREBASE_API_KEY") {
                 firebase.initializeApp(firebaseConfig);
                 this.auth = firebase.auth();
                 this.firestore = firebase.firestore();
